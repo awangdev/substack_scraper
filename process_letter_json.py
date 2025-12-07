@@ -281,5 +281,5 @@ if __name__ == "__main__":
         sys.exit(1)
         
     scraped_dir = sys.argv[1]
-    output_dir = 'content/posts/letters'
+    output_dir = 'output'
     process_letters(scraped_dir, output_dir)

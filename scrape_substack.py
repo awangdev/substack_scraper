@@ -11,10 +11,7 @@ def scrape_post(url):
     try:
         # Determine paths relative to the script location or project root
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        # Assuming the script is in scripts/substack_scraper/ (2 levels deep from root)
-        # We want to put scraped_data in the project root:
-        project_root = os.path.abspath(os.path.join(script_dir, '../../'))
-        output_dir = os.path.join(project_root, 'scraped_data')
+        output_dir = os.path.join(script_dir, 'scraped_data')
         
         post = Post(url)
         content = post.get_content()
